@@ -34,8 +34,8 @@ For me country flags are not shown properly but I wont pretend I know this is th
 ## Costs
 
 
-A simple request for "arrows" that returns "➡️ ⬅️ ↗️ ↘️ ↖️ ↙️" would with the current prompt be 78 tokens.
+A simple request for "arrows" that returns "← ↓ ↑ →" would with the current prompt be 51 tokens.
 As of today (2023-03-04) it is 0.02 USD per 1000 tokens. See [pricing](https://beta.openai.com/pricing) for current pricing information.
 
-78 / 1000 * 0.02 = 0.00156 USD
-Meaning 648 requests would cost 1 USD.
+51 / 1000 * 0.02 = 0.00102 USD
+Meaning 980 requests would cost 1 USD.

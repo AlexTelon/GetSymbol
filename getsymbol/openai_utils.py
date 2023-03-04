@@ -12,15 +12,11 @@ else:
         openai.api_key = f.read().strip()
 
 
-PROMPT_HEADER = """You are a cli tool that given an input you answer with matching utf chars only.
-No text or explanations are allowed. Only unicode symbols. No english words or letters in your response.
-Respond with one or more symbols seperated by space only.
-"""
+PROMPT_HEADER = """You are a tool that given an input you answer with matching utf unicode symbols seperated by spaces. Dont respond with english just symbols. Only unique symbols, never repeat."""
 
 def get_symbols(prompt: str) -> str:
     """Given a prompt, return matching symbols."""
-    # engine = "text-davinci-003" # works well but most expensive
-    engine = 'text-davinci-003' # also seems to work well and might be cheaper?
+    engine = 'text-davinci-003'
     # the other engines were bad at least with this current prompt and temperature etc.
 
     response = openai.Completion.create(
@@ -40,7 +36,7 @@ def get_symbol(prompt: str) -> str:
 
     response = openai.Completion.create(
         engine=engine,
-        prompt=f"{PROMPT_HEADER}.Only return one symbol.\nInput:{prompt}",
+        prompt=f"{PROMPT_HEADER}Only return one symbol. Stop after the first one.\nInput:{prompt}",
         max_tokens=40,
         n=1,
         stop=None,
