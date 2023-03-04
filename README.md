@@ -4,6 +4,9 @@ Uses LLM's to get the symbols you are looking for.
 
 You need an openai key to use this. Usage is not free but it is cheap. But check the [pricing](https://beta.openai.com/pricing) before you use it.
 
+Remember this is a language model so you never really know what it will return. You might ask for the USD symbol expecting `$` but get `💲 🇺 🇸 💹`which is close but probably not what you really wanted.
+
+
 ## Setup
 
 ```shell
@@ -29,13 +32,13 @@ $ getsymbol pirate
 
 It is not perfect. First the language model is instructed to only respond with symbols (as opposed to free flowing english, but you might still get text and not just symbols).
 
-For me country flags are not shown properly but I wont pretend I know this is the tool or my terminal's fault.
+For me country flags are not shown properly but I wont pretend I know unicode and utf to know where the issue really is.
 
 ## Costs
 
 
 A simple request for "arrows" that returns "← ↓ ↑ →" would with the current prompt be 51 tokens.
-As of today (2023-03-04) it is 0.02 USD per 1000 tokens. See [pricing](https://beta.openai.com/pricing) for current pricing information.
+As of today (2023-03-04) it is 0.02\$ per 1000 tokens. See [pricing](https://beta.openai.com/pricing) for current pricing information.
 
-51 / 1000 * 0.02 = 0.00102 USD
-Meaning 980 requests would cost 1 USD.
+51 / 1000 * 0.02 = 0.00102\$
+If all requests are like this then 980 of them would cost 1\$.
