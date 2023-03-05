@@ -28,6 +28,8 @@ The tool should work like this:
 ̇A ̇B ḌC ḤD ḲE ḶF ṂG ṆH ṚI ṢJ ṬK ̇L ̇M ̇N ̇O ̇P ̇Q ṢR ṬU ṾV ẊW ẎX ẒY
 $ getsymbol pirate
 ⚓️🏴‍☠️
+getsymbol --one arrows
+➡️
 ```
 
 It is not perfect. First the language model is instructed to only respond with symbols (as opposed to free flowing english, but you might still get text and not just symbols).
